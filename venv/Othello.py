@@ -141,12 +141,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 #makes empty list to check if all white
                 northEastList = []
                 # adds all pieces between selected and found black to list
-                l = i - 1
-                k = j + 1
+                l = northE + 1
+                k = nEast - 1
                 while l < northE and k < nEast:
                     northEastList.append(GameBoard.board[l][k])
-                    l -= 1
-                    k += 1
+                    l += 1
+                    k -= 1
                 #check if all pieces in list are white
                 if all(i == "White" for i in northEastList):
                     northEastChange = northEastList
@@ -165,12 +165,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all white in between
                 northWestList = []
                 # adds all pieces between selected and found black to list
-                l = i - 1
-                k = j - 1
+                l = northW + 1
+                k = nWest + 1
                 while l < northW and k < nWest:
                     northWestList.append(GameBoard.board[l][k])
-                    l -= 1
-                    k -= 1
+                    l += 1
+                    k += 1
                 # check if all pieces in list are black
                 if all(i == "White" for i in northWestList):
                     northWestChange = northWestList
@@ -188,12 +188,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black
                 southEastList = []
                 # adds all pieces between selected and found white to list
-                l = i + 1
-                k = j + 1
+                l = southE - 1
+                k = sEast - 1
                 while l < southE and k < sEast:
                     southEastList.append(GameBoard.board[l][k])
-                    l += 1
-                    k += 1
+                    l -= 1
+                    k -= 1
                 # check if all pieces in list are black
                 if all(i == "White" for i in southEastList):
                     southEastChange = southEastList
@@ -211,12 +211,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black
                 southWestList = []
                 # adds all pieces between selected and found white to list
-                l = i + 1
-                k = j - 1
+                l = southW - 1
+                k = sWest + 1
                 while l < southW and k < sWest:
                     southWestList.append(GameBoard.board[l][k])
-                    l += 1
-                    k -= 1
+                    l -= 1
+                    k += 1
                 # check if all pieces in list are black
                 if all(i == "White" for i in southWestList):
                     southWestChange = southWestList
@@ -312,12 +312,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black
                 northEastList = []
                 # adds all pieces between selected and found white to list
-                l = i - 1
-                k = j + 1
+                l = northE + 1
+                k = nEast - 1
                 while l < northE and k < nEast:
                     northEastList.append(GameBoard.board[l][k])
-                    l -= 1
-                    k += 1
+                    l += 1
+                    k -= 1
                 # check if all pieces in list are white
                 if all(i == "Black" for i in northEastList):
                     northEastChange = northEastList
@@ -336,12 +336,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black in between
                 northWestList = []
                 # adds all pieces between selected and found white to list
-                l = i - 1
-                k = j - 1
+                l = northW + 1
+                k = nWest + 1
                 while l < northW and k < nWest:
                     northWestList.append(GameBoard.board[l][k])
-                    l -= 1
-                    k -= 1
+                    l += 1
+                    k += 1
                 # check if all pieces in list are black
                 if all(i == "Black" for i in northWestList):
                     northWestChange = northWestList
@@ -359,12 +359,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black in between
                 southEastList = []
                 # adds all pieces between selected and found white to list
-                l = i + 1
-                k = j + 1
+                l = southE - 1
+                k = sEast - 1
                 while l < southE and k < sEast:
                     southEastList.append(GameBoard.board[l][k])
-                    l += 1
-                    k += 1
+                    l -= 1
+                    k -= 1
                 # check if all pieces in list are black
                 if all(i == "Black" for i in southEastList):
                     southEastChange = southEastList
@@ -382,12 +382,12 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # makes empty list to check if all black in between
                 southWestList = []
                 # adds all pieces between selected and found white to list
-                l = i + 1
-                k = j - 1
+                l = southW - 1
+                k = sWest + 1
                 while l < southW and k < sWest:
                     southWestList.append(GameBoard.board[l][k])
-                    l += 1
-                    k -= 1
+                    l -= 1
+                    k += 1
                 # check if all pieces in list are black
                 if all(i == "Black" for i in southWestList):
                     southWestChange = southWestList

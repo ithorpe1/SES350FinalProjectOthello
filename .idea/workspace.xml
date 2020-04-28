@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588106101562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Corrected southwest diagonal check, as it was checking south east">
+      <created>1588106231140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588106231140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,13 +146,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added diagonal legal move checks to the legal move checker for the end of each turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added diagonal legal move checks to the legal move checker for the end of each turn" />
+    <MESSAGE value="Corrected southwest diagonal check, as it was checking south east" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected southwest diagonal check, as it was checking south east" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588106100915">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588106230526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588106100915" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588106230526" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -154,22 +162,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588104416669">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588106327922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588104416669" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588104416669">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588106327922" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588106327921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588104416669" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588104416669">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588106327921" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588106327921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588104416669" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588104416669">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588106327921" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588106327921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588104416669" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588106327921" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
