@@ -137,7 +137,28 @@
       <option name="project" value="LOCAL" />
       <updated>1588107065246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Corrected index error previous change caused and corrected coordinates for end point of change list for each direction">
+      <created>1588107486877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588107486877</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added diagonal directions to changeList for legal move checker">
+      <created>1588107600803</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588107600803</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated end game checker with new diagonal legality checks">
+      <created>1588107673382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588107673382</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,13 +176,16 @@
     <MESSAGE value="Added diagonal legal move checks to the legal move checker for the end of each turn" />
     <MESSAGE value="Corrected southwest diagonal check, as it was checking south east" />
     <MESSAGE value="Corrected diagonal checks as they were not working correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected diagonal checks as they were not working correctly" />
+    <MESSAGE value="Corrected index error previous change caused and corrected coordinates for end point of change list for each direction" />
+    <MESSAGE value="Added diagonal directions to changeList for legal move checker" />
+    <MESSAGE value="Updated end game checker with new diagonal legality checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated end game checker with new diagonal legality checks" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588107600185">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588107672782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588107600185" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588107672782" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -170,22 +194,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588107489215">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588107703023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588107489215" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588107489215">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588107703023" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588107703023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588107489215" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588107489215">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588107703023" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588107703023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588107489215" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588107489215">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588107703023" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588107703023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588107489215" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588107703023" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

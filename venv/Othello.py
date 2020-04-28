@@ -143,7 +143,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found black to list
                 l = northE + 1
                 k = nEast - 1
-                while l < i and k < j:
+                while l < i and k > j:
                     northEastList.append(GameBoard.board[l][k])
                     l += 1
                     k -= 1
@@ -167,7 +167,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found black to list
                 l = northW + 1
                 k = nWest + 1
-                while l < i and k > j:
+                while l < i and k < j:
                     northWestList.append(GameBoard.board[l][k])
                     l += 1
                     k += 1
@@ -190,7 +190,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = southE - 1
                 k = sEast - 1
-                while l > i and k < j:
+                while l > i and k > j:
                     southEastList.append(GameBoard.board[l][k])
                     l -= 1
                     k -= 1
@@ -213,7 +213,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = southW - 1
                 k = sWest + 1
-                while l > i and k > j:
+                while l > i and k < j:
                     southWestList.append(GameBoard.board[l][k])
                     l -= 1
                     k += 1
@@ -314,7 +314,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = northE + 1
                 k = nEast - 1
-                while l < i and k < j:
+                while l < i and k > j:
                     northEastList.append(GameBoard.board[l][k])
                     l += 1
                     k -= 1
@@ -338,7 +338,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = northW + 1
                 k = nWest + 1
-                while l < i and k > j:
+                while l < i and k < j:
                     northWestList.append(GameBoard.board[l][k])
                     l += 1
                     k += 1
@@ -361,7 +361,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = southE - 1
                 k = sEast - 1
-                while l > i and k < j:
+                while l > i and k > j:
                     southEastList.append(GameBoard.board[l][k])
                     l -= 1
                     k -= 1
@@ -384,7 +384,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                 # adds all pieces between selected and found white to list
                 l = southW - 1
                 k = sWest + 1
-                while l > i and k > j:
+                while l > i and k < j:
                     southWestList.append(GameBoard.board[l][k])
                     l -= 1
                     k += 1
@@ -504,7 +504,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found black to list
                             l = northE + 1
                             k = nEast - 1
-                            while l < i and k < j:
+                            while l < i and k > j:
                                 northEastList.append(GameBoard.board[l][k])
                                 l += 1
                                 k -= 1
@@ -528,7 +528,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found black to list
                             l = northW + 1
                             k = nWest + 1
-                            while l < i and k > j:
+                            while l < i and k < j:
                                 northWestList.append(GameBoard.board[l][k])
                                 l += 1
                                 k += 1
@@ -551,7 +551,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = southE - 1
                             k = sEast - 1
-                            while l > i and k < j:
+                            while l > i and k > j:
                                 southEastList.append(GameBoard.board[l][k])
                                 l -= 1
                                 k -= 1
@@ -574,7 +574,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = southW - 1
                             k = sWest + 1
-                            while l > i and k > j:
+                            while l > i and k < j:
                                 southWestList.append(GameBoard.board[l][k])
                                 l -= 1
                                 k += 1
@@ -675,7 +675,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = northE + 1
                             k = nEast - 1
-                            while l < i and k < j:
+                            while l < i and k > j:
                                 northEastList.append(GameBoard.board[l][k])
                                 l += 1
                                 k -= 1
@@ -699,7 +699,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = northW + 1
                             k = nWest + 1
-                            while l < i and k > j:
+                            while l < i and k < j:
                                 northWestList.append(GameBoard.board[l][k])
                                 l += 1
                                 k += 1
@@ -722,7 +722,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = southE - 1
                             k = sEast - 1
-                            while l > i and k < j:
+                            while l > i and k > j:
                                 southEastList.append(GameBoard.board[l][k])
                                 l -= 1
                                 k -= 1
@@ -745,7 +745,7 @@ def legalMoves(GameBoard, Player1, Player2):
                             # adds all pieces between selected and found white to list
                             l = southW - 1
                             k = sWest + 1
-                            while l > i and k > j:
+                            while l > i and k < j:
                                 southWestList.append(GameBoard.board[l][k])
                                 l -= 1
                                 k += 1
@@ -756,7 +756,7 @@ def legalMoves(GameBoard, Player1, Player2):
                         southW += 1
                         sWest -= 1
 
-                changeList = eastChange + westChange + southChange + northChange
+                changeList = eastChange + westChange + southChange + northChange + northEastChange + northWestChange + southEastChange + southWestChange
                 if len(changeList) != 0:
                     moves += 1
 
