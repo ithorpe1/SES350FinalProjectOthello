@@ -39,8 +39,10 @@ def changePiece(GameBoard, row, col, playerTurn, Player1, Player2):
         button = Button(root, height=70, image=pixel, width=69, bg="#000000", command=claimedTile)
         button.grid(row=row, column=col)
 
+
 def claimedTile():
     easygui.msgbox("This tile has already been claimed!", title = "Error!")
+
 
 def changeTurn(Player1, Player2):
     global playerTurn
@@ -48,6 +50,7 @@ def changeTurn(Player1, Player2):
         playerTurn = Player2
     elif playerTurn == Player2:
         playerTurn = Player1
+
 
 def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
     if playerTurn == Player1:
@@ -393,7 +396,8 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
             sWest += 1
 
     changeList = eastChange + westChange + southChange + northChange
-    if len(changeList) == 0: #Checks if a move is legal and informs the player if it isn't
+    if len(changeList) == 0:
+        #Checks if a move is legal and informs the player if it isn't
         easygui.msgbox("This is not a legal move!", title = "Error!")
     else:
         changeList += [[i, j]]
@@ -403,6 +407,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         changeTurn(Player1, Player2)
 
     legalMoves(GameBoard, Player1, Player2)
+
 
 def legalMoves(GameBoard, Player1, Player2):
     moves = 0
@@ -486,6 +491,100 @@ def legalMoves(GameBoard, Player1, Player2):
                                 break
                         east += 1
 
+                    # Check pieces north east of selected piece
+                    northEastChange = []
+                    northE = i - 1
+                    nEast = j + 1
+                    # Check for edge of board
+                    while northE > 0 and nEast < 7:
+                        # check for other black pieces
+                        if GameBoard.board[northE][nEast] == "White":
+                            # makes empty list to check if all black
+                            northEastList = []
+                            # adds all pieces between selected and found white to list
+                            l = i - 1
+                            k = j + 1
+                            while l < northE and k < nEast:
+                                northEastList.append(GameBoard.board[l][k])
+                                l -= 1
+                                k += 1
+                            # check if all pieces in list are white
+                            if all(i == "Black" for i in northEastList):
+                                northEastChange = northEastList
+                                break
+                        northE -= 1
+                        nEast += 1
+
+                    # Check pieces north west of selected piece
+                    northWestChange = []
+                    northW = i - 1
+                    nWest = j - 1
+                    # Check for edge of board
+                    while northW > 0 and nWest > 0:
+                        # check for other black piece in row
+                        if GameBoard.board[northW][nWest] == "White":
+                            # makes empty list to check if all black in between
+                            northWestList = []
+                            # adds all pieces between selected and found white to list
+                            l = i - 1
+                            k = j - 1
+                            while l < northW and k < nWest:
+                                northWestList.append(GameBoard.board[l][k])
+                                l -= 1
+                                k -= 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in northWestList):
+                                northWestChange = northWestList
+                                break
+                        northW -= 1
+                        nWest -= 1
+
+                    # Check pieces south east of selected piece
+                    southEastChange = []
+                    southE = i + 1
+                    sEast = j + 1
+                    # Check for edge of board
+                    while southE < 7 and sEast < 7:
+                        if GameBoard.board[southE][sEast] == "White":
+                            # makes empty list to check if all black in between
+                            southEastList = []
+                            # adds all pieces between selected and found white to list
+                            l = i + 1
+                            k = j + 1
+                            while l < southE and k < sEast:
+                                southEastList.append(GameBoard.board[l][k])
+                                l += 1
+                                k += 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in southEastList):
+                                southEastChange = southEastList
+                                break
+                        southE += 1
+                        sEast += 1
+
+                    # Check pieces south west of selected piece
+                    southWestChange = []
+                    southW = i + 1
+                    sWest = j + 1
+                    # Check for edge of board
+                    while southW < 7 and sWest > 0:
+                        if GameBoard.board[southW][sWest] == "White":
+                            # makes empty list to check if all black in between
+                            southWestList = []
+                            # adds all pieces between selected and found white to list
+                            l = i + 1
+                            k = j + 1
+                            while l < southW and k < sWest:
+                                southWestList.append(GameBoard.board[l][k])
+                                l += 1
+                                k += 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in southWestList):
+                                southWestChange = southWestList
+                                break
+                        southW += 1
+                        sWest += 1
+
                 elif playerTurn == Player2:
                     # Check pieces south of the selected piece
                     southChange = []
@@ -562,6 +661,101 @@ def legalMoves(GameBoard, Player1, Player2):
                                 eastChange = eastCoordList
                                 break
                         east += 1
+
+
+                    # Check pieces north east of selected piece
+                    northEastChange = []
+                    northE = i - 1
+                    nEast = j + 1
+                    # Check for edge of board
+                    while northE > 0 and nEast < 7:
+                        # check for other black pieces
+                        if GameBoard.board[northE][nEast] == "White":
+                            # makes empty list to check if all black
+                            northEastList = []
+                            # adds all pieces between selected and found white to list
+                            l = i - 1
+                            k = j + 1
+                            while l < northE and k < nEast:
+                                northEastList.append(GameBoard.board[l][k])
+                                l -= 1
+                                k += 1
+                            # check if all pieces in list are white
+                            if all(i == "Black" for i in northEastList):
+                                northEastChange = northEastList
+                                break
+                        northE -= 1
+                        nEast += 1
+
+                    # Check pieces north west of selected piece
+                    northWestChange = []
+                    northW = i - 1
+                    nWest = j - 1
+                    # Check for edge of board
+                    while northW > 0 and nWest > 0:
+                        # check for other black piece in row
+                        if GameBoard.board[northW][nWest] == "White":
+                            # makes empty list to check if all black in between
+                            northWestList = []
+                            # adds all pieces between selected and found white to list
+                            l = i - 1
+                            k = j - 1
+                            while l < northW and k < nWest:
+                                northWestList.append(GameBoard.board[l][k])
+                                l -= 1
+                                k -= 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in northWestList):
+                                northWestChange = northWestList
+                                break
+                        northW -= 1
+                        nWest -= 1
+
+                    # Check pieces south east of selected piece
+                    southEastChange = []
+                    southE = i + 1
+                    sEast = j + 1
+                    # Check for edge of board
+                    while southE < 7 and sEast < 7:
+                        if GameBoard.board[southE][sEast] == "White":
+                            # makes empty list to check if all black in between
+                            southEastList = []
+                            # adds all pieces between selected and found white to list
+                            l = i + 1
+                            k = j + 1
+                            while l < southE and k < sEast:
+                                southEastList.append(GameBoard.board[l][k])
+                                l += 1
+                                k += 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in southEastList):
+                                southEastChange = southEastList
+                                break
+                        southE += 1
+                        sEast += 1
+
+                    # Check pieces south west of selected piece
+                    southWestChange = []
+                    southW = i + 1
+                    sWest = j - 1
+                    # Check for edge of board
+                    while southW < 7 and sWest > 0:
+                        if GameBoard.board[southW][sWest] == "White":
+                            # makes empty list to check if all black in between
+                            southWestList = []
+                            # adds all pieces between selected and found white to list
+                            l = i + 1
+                            k = j - 1
+                            while l < southW and k < sWest:
+                                southWestList.append(GameBoard.board[l][k])
+                                l += 1
+                                k -= 1
+                            # check if all pieces in list are black
+                            if all(i == "Black" for i in southWestList):
+                                southWestChange = southWestList
+                                break
+                        southW += 1
+                        sWest -= 1
 
                 changeList = eastChange + westChange + southChange + northChange
                 if len(changeList) != 0:
