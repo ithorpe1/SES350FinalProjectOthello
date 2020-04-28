@@ -393,7 +393,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
             sWest += 1
 
     changeList = eastChange + westChange + southChange + northChange
-    if len(changeList) == 0:
+    if len(changeList) == 0: #Checks if a move is legal and informs the player if it isn't
         easygui.msgbox("This is not a legal move!", title = "Error!")
     else:
         changeList += [[i, j]]
