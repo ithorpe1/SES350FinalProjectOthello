@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="Updated diagonal checker as it was not passing coordinates to the change token function">
+    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Othello.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Othello.py" afterDir="false" />
     </list>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588108556232</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Corrected logic in legal move checker (was ignoring pieces at the edges of the board)">
+      <created>1588178595341</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588178595341</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,13 +204,14 @@
     <MESSAGE value="Updated end game checker with new diagonal legality checks" />
     <MESSAGE value="Corrected error in diagonal move checker (&lt; and &gt; were inverted for west/east checks) and added diagonal lists to end game checker" />
     <MESSAGE value="Updated diagonal checker as it was not passing coordinates to the change token function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated diagonal checker as it was not passing coordinates to the change token function" />
+    <MESSAGE value="Corrected logic in legal move checker (was ignoring pieces at the edges of the board)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected logic in legal move checker (was ignoring pieces at the edges of the board)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588178107307">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588178594595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588178107307" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588178594595" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
