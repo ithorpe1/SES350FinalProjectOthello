@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="">
+    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="Updated diagonal checker as it was not passing coordinates to the change token function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Othello.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Othello.py" afterDir="false" />
     </list>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588108033683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated diagonal checker as it was not passing coordinates to the change token function">
+      <created>1588108556232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588108556232</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,7 +180,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -187,13 +196,14 @@
     <MESSAGE value="Added diagonal directions to changeList for legal move checker" />
     <MESSAGE value="Updated end game checker with new diagonal legality checks" />
     <MESSAGE value="Corrected error in diagonal move checker (&lt; and &gt; were inverted for west/east checks) and added diagonal lists to end game checker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected error in diagonal move checker (&lt; and &gt; were inverted for west/east checks) and added diagonal lists to end game checker" />
+    <MESSAGE value="Updated diagonal checker as it was not passing coordinates to the change token function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated diagonal checker as it was not passing coordinates to the change token function" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588108032914">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588178107307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588108032914" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588178107307" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -202,22 +212,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588108034166">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588108793853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588108034166" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588108034166">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793853" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588108793852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588108034166" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588108034166">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793852" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588108793852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588108034166" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588108034166">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793852" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588108793853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588108034166" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793853" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,10 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588105909027" />
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587666330215">
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588178019356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587666330215" />
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588178019356" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588105896596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

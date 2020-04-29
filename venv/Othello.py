@@ -3,11 +3,13 @@ from tkinter import *
 import tkinter.ttk as ttk
 import easygui
 
+
 class Player:
     def __init__(self, name, wins, tokens):
         self.name = name
         self.wins = wins
         self.tokens = tokens
+
 
 class Board():
     def __init__(self):
@@ -20,20 +22,21 @@ class Board():
                       ["Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank"],
                       ["Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank", "Blank"]]
 
+
 def changePiece(GameBoard, row, col, playerTurn, Player1, Player2):
     if GameBoard.board[row][col] == "Blank":
         if playerTurn == Player1:
             GameBoard.board[row][col] = "Black"
-            button = Button(root, height=70, image=pixel, width=69, bg="#000000", command = claimedTile)
+            button = Button(root, height=70, image=pixel, width=69, bg="#000000", command=claimedTile)
             button.grid(row=row, column=col)
         elif playerTurn == Player2:
             GameBoard.board[row][col] = "White"
-            button = Button(root, height=70, image=pixel, width=69, bg="#ffffff", command = claimedTile)
-            button.grid(row=row, column=col)
-    elif GameBoard.board[row][col] == "Black":
-            GameBoard.board[row][col] = "White"
             button = Button(root, height=70, image=pixel, width=69, bg="#ffffff", command=claimedTile)
             button.grid(row=row, column=col)
+    elif GameBoard.board[row][col] == "Black":
+        GameBoard.board[row][col] = "White"
+        button = Button(root, height=70, image=pixel, width=69, bg="#ffffff", command=claimedTile)
+        button.grid(row=row, column=col)
     elif GameBoard.board[row][col] == "White":
         GameBoard.board[row][col] = "Black"
         button = Button(root, height=70, image=pixel, width=69, bg="#000000", command=claimedTile)
@@ -41,7 +44,7 @@ def changePiece(GameBoard, row, col, playerTurn, Player1, Player2):
 
 
 def claimedTile():
-    easygui.msgbox("This tile has already been claimed!", title = "Error!")
+    easygui.msgbox("This tile has already been claimed!", title="Error!")
 
 
 def changeTurn(Player1, Player2):
@@ -52,13 +55,13 @@ def changeTurn(Player1, Player2):
         playerTurn = Player1
 
 
-def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
+def isLegal(GameBoard, i, j, playerTurn, Player1, Player2):
     if playerTurn == Player1:
         # Check pieces south of the selected piece
         southChange = []
         south = i + 1
         # check for white piece in south if not too close to edge (tile is at index 6 or 7)
-        while south < 7:
+        while south <= 7:
             if GameBoard.board[south][j] == "Black":
                 # makes empty list to check if all black
                 southList = []
@@ -77,13 +80,13 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         northChange = []
         north = i - 1
         # check for white piece in north if not too close to edge (tile is at index 0 or 1)
-        while north > 0:
+        while north >= 0:
             if GameBoard.board[north][j] == "Black":
                 # makes empty list to check if all black
                 northList = []
                 northCoordList = []
                 # adds all pieces between selected and found white to list
-                for l in range(north+1, i):
+                for l in range(north + 1, i):
                     northList.append(GameBoard.board[l][j])
                     northCoordList.append([l, j])
                 # check if all pieces in list are black
@@ -96,13 +99,13 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         westChange = []
         west = j - 1
         # check for white piece in west if not too close to edge (tile is at index 0 or 1)
-        while west > 0:
+        while west >= 0:
             if GameBoard.board[i][west] == "Black":
                 # makes empty list to check if all black
                 westList = []
                 westCoordList = []
                 # adds all pieces between selected and found white to list
-                for l in range(west+1, j):
+                for l in range(west + 1, j):
                     westList.append(GameBoard.board[i][l])
                     westCoordList.append([i, l])
                 # check if all pieces in list are black
@@ -115,7 +118,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         eastChange = []
         east = j + 1
         # check for white piece in east if not too close to edge (tile is at index 6 or 7)
-        while east < 7:
+        while east <= 7:
             if GameBoard.board[i][east] == "Black":
                 # makes empty list to check if all black
                 eastList = []
@@ -130,15 +133,15 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                     break
             east += 1
 
-        #Check pieces north east of selected piece
+        # Check pieces north east of selected piece
         northEastChange = []
         northE = i - 1
         nEast = j + 1
-        #Check for edge of board
-        while northE > 0 and nEast < 7:
-            #check for other black pieces
+        # Check for edge of board
+        while northE >= 0 and nEast <= 7:
+            # check for other black pieces
             if GameBoard.board[northE][nEast] == "Black":
-                #makes empty list to check if all white
+                # makes empty list to check if all white
                 northEastList = []
                 # adds all pieces between selected and found black to list
                 l = northE + 1
@@ -148,11 +151,11 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
                     northEastChange.append([l, k])
                     l += 1
                     k -= 1
-                #check if all pieces in list are white
+                # check if all pieces in list are white
                 if all(i == "White" for i in northEastList):
                     break
                 else:
-                    northEastChange =[]
+                    northEastChange = []
             northE -= 1
             nEast += 1
 
@@ -161,7 +164,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         northW = i - 1
         nWest = j - 1
         # Check for edge of board
-        while northW > 0 and nWest > 0:
+        while northW >= 0 and nWest >= 0:
             # check for other black piece in row
             if GameBoard.board[northW][nWest] == "Black":
                 # makes empty list to check if all white in between
@@ -187,7 +190,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         southE = i + 1
         sEast = j + 1
         # Check for edge of board
-        while southE < 7 and sEast < 7:
+        while southE <= 7 and sEast <= 7:
             if GameBoard.board[southE][sEast] == "Black":
                 # makes empty list to check if all black
                 southEastList = []
@@ -212,7 +215,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         southW = i + 1
         sWest = j - 1
         # Check for edge of board
-        while southW < 7 and sWest < 7:
+        while southW <= 7 and sWest <= 7:
             if GameBoard.board[southW][sWest] == "Black":
                 # makes empty list to check if all black
                 southWestList = []
@@ -233,55 +236,55 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
             sWest -= 1
 
     elif playerTurn == Player2:
-        #Check pieces south of the selected piece
+        # Check pieces south of the selected piece
         southChange = []
         south = i + 1
-        #check for white piece in south if not too close to edge (tile is at index 6 or 7)
-        while south < 7:
-             if GameBoard.board[south][j] == "White":
-                 #makes empty list to check if all black
-                 southList = []
-                 southCoordList = []
-                 #adds all pieces between selected and found white to list
-                 for l in range(i+1, south):
-                     southList.append(GameBoard.board[l][j])
-                     southCoordList.append([l, j])
-                     #check if all pieces in list are black
-                 if all(i == "Black" for i in southList):
-                     southChange = southCoordList
-                     break
-             south += 1
+        # check for white piece in south if not too close to edge (tile is at index 6 or 7)
+        while south <= 7:
+            if GameBoard.board[south][j] == "White":
+                # makes empty list to check if all black
+                southList = []
+                southCoordList = []
+                # adds all pieces between selected and found white to list
+                for l in range(i + 1, south):
+                    southList.append(GameBoard.board[l][j])
+                    southCoordList.append([l, j])
+                    # check if all pieces in list are black
+                if all(i == "Black" for i in southList):
+                    southChange = southCoordList
+                    break
+            south += 1
 
-        #Checks pieces north of selected piece
+        # Checks pieces north of selected piece
         northChange = []
         north = i - 1
-        #check for white piece in north if not too close to edge (tile is at index 0 or 1)
-        while north > 0:
-             if GameBoard.board[north][j] == "White":
-                 #makes empty list to check if all black
-                 northList = []
-                 northCoordList = []
-                 #adds all pieces between selected and found white to list
-                 for l in range(north+1, i ):
-                     northList.append(GameBoard.board[l][j])
-                     northCoordList.append([l, j])
-                 #check if all pieces in list are black
-                 if all(i == "Black" for i in northList):
-                     northChange = northCoordList
-                     break
-             north -= 1
+        # check for white piece in north if not too close to edge (tile is at index 0 or 1)
+        while north >= 0:
+            if GameBoard.board[north][j] == "White":
+                # makes empty list to check if all black
+                northList = []
+                northCoordList = []
+                # adds all pieces between selected and found white to list
+                for l in range(north + 1, i):
+                    northList.append(GameBoard.board[l][j])
+                    northCoordList.append([l, j])
+                # check if all pieces in list are black
+                if all(i == "Black" for i in northList):
+                    northChange = northCoordList
+                    break
+            north -= 1
 
         # Checks pieces west of selected piece
         westChange = []
         west = j - 1
         # check for white piece in west if not too close to edge (tile is at index 0 or 1)
-        while west > 0:
+        while west >= 0:
             if GameBoard.board[i][west] == "White":
                 # makes empty list to check if all black
                 westList = []
                 westCoordList = []
                 # adds all pieces between selected and found white to list
-                for l in range(west+1, j):
+                for l in range(west + 1, j):
                     westList.append(GameBoard.board[i][l])
                     westCoordList.append([i, l])
                 # check if all pieces in list are black
@@ -294,7 +297,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         eastChange = []
         east = j + 1
         # check for white piece in east if not too close to edge (tile is at index 6 or 7)
-        while east < 7:
+        while east <= 7:
             if GameBoard.board[i][east] == "White":
                 # makes empty list to check if all black
                 eastList = []
@@ -314,7 +317,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         northE = i - 1
         nEast = j + 1
         # Check for edge of board
-        while northE > 0 and nEast < 7:
+        while northE >= 0 and nEast <= 7:
             # check for other black pieces
             if GameBoard.board[northE][nEast] == "White":
                 # makes empty list to check if all black
@@ -340,7 +343,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         northW = i - 1
         nWest = j - 1
         # Check for edge of board
-        while northW > 0 and nWest > 0:
+        while northW >= 0 and nWest >= 0:
             # check for other black piece in row
             if GameBoard.board[northW][nWest] == "White":
                 # makes empty list to check if all black in between
@@ -366,7 +369,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         southE = i + 1
         sEast = j + 1
         # Check for edge of board
-        while southE < 7 and sEast < 7:
+        while southE <= 7 and sEast <= 7:
             if GameBoard.board[southE][sEast] == "White":
                 # makes empty list to check if all black in between
                 southEastList = []
@@ -391,7 +394,7 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
         southW = i + 1
         sWest = j - 1
         # Check for edge of board
-        while southW < 7 and sWest > 0:
+        while southW <= 7 and sWest >= 0:
             if GameBoard.board[southW][sWest] == "White":
                 # makes empty list to check if all black in between
                 southWestList = []
@@ -411,10 +414,10 @@ def isLegal(GameBoard,i,j,playerTurn,Player1,Player2):
             southW += 1
             sWest -= 1
 
-    changeList = eastChange + westChange + southChange + northChange +northEastChange + northWestChange + southEastChange + southWestChange
+    changeList = eastChange + westChange + southChange + northChange + northEastChange + northWestChange + southEastChange + southWestChange
     if len(changeList) == 0:
-        #Checks if a move is legal and informs the player if it isn't
-        easygui.msgbox("This is not a legal move!", title = "Error!")
+        # Checks if a move is legal and informs the player if it isn't
+        easygui.msgbox("This is not a legal move!", title="Error!")
     else:
         changeList += [[i, j]]
         for i in range(len(changeList)):
@@ -435,7 +438,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southChange = []
                     south = i + 1
                     # check for white piece in south if not too close to edge (tile is at index 6 or 7)
-                    while south < 7:
+                    while south <= 7:
                         if GameBoard.board[south][j] == "Black":
                             # makes empty list to check if all black
                             southList = []
@@ -454,7 +457,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northChange = []
                     north = i - 1
                     # check for white piece in north if not too close to edge (tile is at index 0 or 1)
-                    while north > 0:
+                    while north >= 0:
                         if GameBoard.board[north][j] == "Black":
                             # makes empty list to check if all black
                             northList = []
@@ -473,7 +476,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     westChange = []
                     west = j - 1
                     # check for white piece in west if not too close to edge (tile is at index 0 or 1)
-                    while west > 0:
+                    while west >= 0:
                         if GameBoard.board[i][west] == "Black":
                             # makes empty list to check if all black
                             westList = []
@@ -492,7 +495,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     eastChange = []
                     east = j + 1
                     # check for white piece in east if not too close to edge (tile is at index 6 or 7)
-                    while east < 7:
+                    while east <= 7:
                         if GameBoard.board[i][east] == "Black":
                             # makes empty list to check if all black
                             eastList = []
@@ -512,7 +515,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northE = i - 1
                     nEast = j + 1
                     # Check for edge of board
-                    while northE > 0 and nEast < 7:
+                    while northE >= 0 and nEast <= 7:
                         # check for other black pieces
                         if GameBoard.board[northE][nEast] == "Black":
                             # makes empty list to check if all white
@@ -538,7 +541,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northW = i - 1
                     nWest = j - 1
                     # Check for edge of board
-                    while northW > 0 and nWest > 0:
+                    while northW >= 0 and nWest >= 0:
                         # check for other black piece in row
                         if GameBoard.board[northW][nWest] == "Black":
                             # makes empty list to check if all white in between
@@ -564,7 +567,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southE = i + 1
                     sEast = j + 1
                     # Check for edge of board
-                    while southE < 7 and sEast < 7:
+                    while southE <= 7 and sEast <= 7:
                         if GameBoard.board[southE][sEast] == "Black":
                             # makes empty list to check if all black
                             southEastList = []
@@ -589,7 +592,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southW = i + 1
                     sWest = j - 1
                     # Check for edge of board
-                    while southW < 7 and sWest < 7:
+                    while southW <= 7 and sWest <= 7:
                         if GameBoard.board[southW][sWest] == "Black":
                             # makes empty list to check if all black
                             southWestList = []
@@ -614,7 +617,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southChange = []
                     south = i + 1
                     # check for white piece in south if not too close to edge (tile is at index 6 or 7)
-                    while south < 7:
+                    while south <= 7:
                         if GameBoard.board[south][j] == "White":
                             # makes empty list to check if all black
                             southList = []
@@ -633,7 +636,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northChange = []
                     north = i - 1
                     # check for white piece in north if not too close to edge (tile is at index 0 or 1)
-                    while north > 0:
+                    while north >= 0:
                         if GameBoard.board[north][j] == "White":
                             # makes empty list to check if all black
                             northList = []
@@ -652,7 +655,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     westChange = []
                     west = j - 1
                     # check for white piece in west if not too close to edge (tile is at index 0 or 1)
-                    while west > 0:
+                    while west >= 0:
                         if GameBoard.board[i][west] == "White":
                             # makes empty list to check if all black
                             westList = []
@@ -671,7 +674,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     eastChange = []
                     east = j + 1
                     # check for white piece in east if not too close to edge (tile is at index 6 or 7)
-                    while east < 7:
+                    while east <= 7:
                         if GameBoard.board[i][east] == "White":
                             # makes empty list to check if all black
                             eastList = []
@@ -691,7 +694,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northE = i - 1
                     nEast = j + 1
                     # Check for edge of board
-                    while northE > 0 and nEast < 7:
+                    while northE >= 0 and nEast <= 7:
                         # check for other black pieces
                         if GameBoard.board[northE][nEast] == "White":
                             # makes empty list to check if all black
@@ -717,7 +720,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     northW = i - 1
                     nWest = j - 1
                     # Check for edge of board
-                    while northW > 0 and nWest > 0:
+                    while northW >= 0 and nWest >= 0:
                         # check for other black piece in row
                         if GameBoard.board[northW][nWest] == "White":
                             # makes empty list to check if all black in between
@@ -743,7 +746,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southE = i + 1
                     sEast = j + 1
                     # Check for edge of board
-                    while southE < 7 and sEast < 7:
+                    while southE <= 7 and sEast <= 7:
                         if GameBoard.board[southE][sEast] == "White":
                             # makes empty list to check if all black in between
                             southEastList = []
@@ -768,7 +771,7 @@ def legalMoves(GameBoard, Player1, Player2):
                     southW = i + 1
                     sWest = j - 1
                     # Check for edge of board
-                    while southW < 7 and sWest > 0:
+                    while southW <= 7 and sWest >= 0:
                         if GameBoard.board[southW][sWest] == "White":
                             # makes empty list to check if all black in between
                             southWestList = []
@@ -803,11 +806,14 @@ def legalMoves(GameBoard, Player1, Player2):
                     white += 1
 
         if black > white:
-            easygui.msgbox("The game is over! Player 1 " + Player1 + " is the winner! Press play above to start again", title="Game End")
+            easygui.msgbox("The game is over! Player 1 " + Player1 + " is the winner! Press play above to start again",
+                           title="Game End")
         elif white > black:
-            easygui.msgbox("The game is over! Player 2 " + Player2 + " is the winner! Press play above to start again", title="Game End")
+            easygui.msgbox("The game is over! Player 2 " + Player2 + " is the winner! Press play above to start again",
+                           title="Game End")
         elif white == black:
             easygui.msgbox("The game is over! It is a tie! Press play above to start again", title="Game End")
+
 
 def GamePVP():
     GameBoard = Board()
@@ -816,29 +822,31 @@ def GamePVP():
     for i in range(8):
         for j in range(8):
             if GameBoard.board[i][j] == "Blank":
-                button = Button(root, height = 70, image=pixel, width = 69, bg = "#c9b493", text = "Blank", command = lambda i=i, j = j: isLegal(GameBoard,i,j,playerTurn,Player1.name,Player2.name))
-                button.grid(row = i, column = j)
+                button = Button(root, height=70, image=pixel, width=69, bg="#c9b493", text="Blank",
+                                command=lambda i=i, j=j: isLegal(GameBoard, i, j, playerTurn, Player1.name,
+                                                                 Player2.name))
+                button.grid(row=i, column=j)
             elif GameBoard.board[i][j] == "Black":
-                button = Button(root, height = 70, image=pixel, width = 69, bg = "#000000", command = claimedTile)
-                button.grid(row = i, column = j)
+                button = Button(root, height=70, image=pixel, width=69, bg="#000000", command=claimedTile)
+                button.grid(row=i, column=j)
             elif GameBoard.board[i][j] == "White":
-                button = Button(root, height = 70, image=pixel, width = 69, bg = "#ffffff", command = claimedTile)
-                button.grid(row = i, column = j)
+                button = Button(root, height=70, image=pixel, width=69, bg="#ffffff", command=claimedTile)
+                button.grid(row=i, column=j)
 
 
 root = Tk()
 root.title("Othello")
 root.geometry("600x700")
-root.resizable(width = False, height = False)
+root.resizable(width=False, height=False)
 welcome = Label(root, text="WELCOME! Press play in the menu above to start")
 welcome.pack()
 Player1 = Player(name="Player1", wins=0, tokens=2)
 Player2 = Player(name="Player2", wins=0, tokens=2)
 
 playerTurn = Player1.name
-pixel = PhotoImage(width = 1, height = 1)
+pixel = PhotoImage(width=1, height=1)
 menubar = Menu(root)
-menubar.add_command(label="Play Human vs. Human", command = lambda: [welcome.pack_forget(), GamePVP()])
-menubar.add_command(label="Exit", command = root.destroy)
+menubar.add_command(label="Play Human vs. Human", command=lambda: [welcome.pack_forget(), GamePVP()])
+menubar.add_command(label="Exit", command=root.destroy)
 root.config(menu=menubar)
 root.mainloop()
