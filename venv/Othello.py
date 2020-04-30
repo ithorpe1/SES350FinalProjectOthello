@@ -503,7 +503,7 @@ def GamePVE(GameBoard, i, j):
     endGamePVE(GameBoard, "White")
 
 
-def GameEndPVE(Gameboard, color):
+def GameEndPVE(GameBoard, color):
     moves = 0
     for i in range(8):
         for j in range(8):

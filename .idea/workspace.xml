@@ -208,10 +208,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588266492983">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588274127483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266492983" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588274127483" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
