@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="Updated diagonal checker as it was not passing coordinates to the change token function">
+    <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Othello.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Othello.py" afterDir="false" />
     </list>
@@ -212,22 +212,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588108793853">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588266113959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793853" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588108793852">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113959" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588266113958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793852" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588108793852">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113958" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588266113957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793852" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588108793853">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113957" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588266113958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588108793853" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113958" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
