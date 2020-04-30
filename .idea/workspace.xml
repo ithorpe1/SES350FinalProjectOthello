@@ -200,10 +200,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated diagonal checker as it was not passing coordinates to the change token function" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588178107307">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588266492983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588178107307" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266492983" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,17 +232,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588105880878" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588105909027">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588266570995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588105909027" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266570995" />
     <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588178019356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588178019356" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588105896596">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588266564358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588105896596" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266564358" />
   </component>
 </project>
