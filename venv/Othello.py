@@ -575,6 +575,111 @@ def GameBoardSetupPVE():
                 button.grid(row=i, column=j)
 
 
+def GameSimulation():
+    label = Label(root, text="Please Wait!")
+    label.pack()
+    #number of runs to make
+    runs = 1
+    #sets win tracker for both colors
+    whiteWins = 0
+    blackWins = 0
+    # Runs simulation until out of chosen number of runs
+    while runs > 0:
+        # Makes gameboard for the computers to play
+        GameBoard = Board()
+        while whiteWins == 0 or blackWins == 0:
+            changeListChoice = []
+            for i in range(8):
+                for j in range(8):
+                    if GameBoard.board[i][j] == "Blank":
+                        changeListComputer = isLegal(GameBoard, i, j, "Black")
+
+                        if len(changeListComputer) != 0:
+                            changeListChoice.append([i, j])
+            choice = random.choice(changeListChoice)
+            finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "Black")
+            finalChangeListComputer += [[choice[0], choice[1]]]
+            for i in range(len(finalChangeListComputer)):
+                coord = finalChangeListComputer[i]
+                GameBoard.board[coord[0]][coord[1]] = "Black"
+
+            moves = 0
+            for i in range(8):
+                for j in range(8):
+                    if GameBoard.board[i][j] == "Blank":
+                        changeList = isLegal(GameBoard, i, j, "Black")
+
+                        if len(changeList) != 0:
+                            moves += 1
+
+            if moves == 0:
+                black = 0
+                white = 0
+                for i in range(8):
+                    for j in range(8):
+                        if GameBoard.board[i][j] == "Black":
+                            black += 1
+                        elif GameBoard.board[i][j] == "White":
+                            white += 1
+
+                if black > white:
+                    blackWins += 1
+                    runs -= 1
+                elif white > black:
+                    whiteWins += 1
+                    runs -= 1
+
+            changeListChoice = []
+            for i in range(8):
+                for j in range(8):
+                    if GameBoard.board[i][j] == "Blank":
+                        changeListComputer = isLegal(GameBoard, i, j, "White")
+
+                        if len(changeListComputer) != 0:
+                            changeListChoice.append([i, j])
+            choice = random.choice(changeListChoice)
+            finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "White")
+            finalChangeListComputer += [[choice[0], choice[1]]]
+            for i in range(len(finalChangeListComputer)):
+                coord = finalChangeListComputer[i]
+                GameBoard.board[coord[0]][coord[1]] = "White"
+
+            moves = 0
+            for i in range(8):
+                for j in range(8):
+                    if GameBoard.board[i][j] == "Blank":
+                        changeList = isLegal(GameBoard, i, j, "White")
+
+                        if len(changeList) != 0:
+                            moves += 1
+
+            if moves == 0:
+                black = 0
+                white = 0
+                for i in range(8):
+                    for j in range(8):
+                        if GameBoard.board[i][j] == "Black":
+                            black += 1
+                        elif GameBoard.board[i][j] == "White":
+                            white += 1
+
+                if black > white:
+                    blackWins += 1
+                    runs -= 1
+                elif white > black:
+                    whiteWins += 1
+                    runs -= 1
+
+        if whiteWins > blackWins:
+            easygui.msgbox(
+                "The game is over! Computer 2 (White) is the winner! Black won " + blackWins + " times and white won "
+                + whiteWins + " time. Press play above to start again", title="Game End")
+        elif whiteWins < blackWins:
+            easygui.msgbox(
+                "The game is over! Computer 1 (Black) is the winner! Black won " + blackWins + " times and white won "
+                + whiteWins + " time. Press play above to start again", title="Game End")
+
+
 root = Tk()
 root.title("Othello")
 root.geometry("600x700")
@@ -589,6 +694,7 @@ pixel = PhotoImage(width=1, height=1)
 menubar = Menu(root)
 menubar.add_command(label="Play Human vs. Human", command=lambda: [welcome.pack_forget(), GameBoardSetupPVP()])
 menubar.add_command(label="Play Human vs. Computer", command=lambda: [welcome.pack_forget(), GameBoardSetupPVE()])
+menubar.add_command(label="Play Computer vs. Computer", command=lambda: [welcome.pack_forget(), GameSimulation()])
 menubar.add_command(label="Exit", command=root.destroy)
 root.config(menu=menubar)
 root.mainloop()

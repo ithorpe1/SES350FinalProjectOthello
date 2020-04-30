@@ -179,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1588266493675</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added in end game function for Human VS Computer">
+      <created>1588274128272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588274128272</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Corrected end game for Human VS Computer">
+      <created>1588274156864</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588274156864</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changed end game messages">
+      <created>1588274211567</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588274211567</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,13 +226,16 @@
     <MESSAGE value="Corrected error in diagonal move checker (&lt; and &gt; were inverted for west/east checks) and added diagonal lists to end game checker" />
     <MESSAGE value="Updated diagonal checker as it was not passing coordinates to the change token function" />
     <MESSAGE value="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length" />
-    <option name="LAST_COMMIT_MESSAGE" value="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length" />
+    <MESSAGE value="Added in end game function for Human VS Computer" />
+    <MESSAGE value="Corrected end game for Human VS Computer" />
+    <MESSAGE value="Changed end game messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed end game messages" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588274155904">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588274210963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588274155904" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588274210963" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -220,22 +244,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588269046100">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588277361480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588269046100">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588277361480" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588277361480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588269046100">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588277361480" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588277361480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588269046100">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588277361480" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588277361480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588277361480" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
