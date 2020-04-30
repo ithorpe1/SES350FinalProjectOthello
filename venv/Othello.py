@@ -462,10 +462,10 @@ def endGamePVP(GameBoard, Player1, Player2):
                     white += 1
 
         if black > white:
-            easygui.msgbox("The game is over! Player 1 " + Player1 + " is the winner! Press play above to start again",
+            easygui.msgbox("The game is over! Player 1 (Black) is the winner! Press play above to start again",
                            title="Game End")
         elif white > black:
-            easygui.msgbox("The game is over! Player 2 " + Player2 + " is the winner! Press play above to start again",
+            easygui.msgbox("The game is over! Player 2 (White) is the winner! Press play above to start again",
                            title="Game End")
         elif white == black:
             easygui.msgbox("The game is over! It is a tie! Press play above to start again", title="Game End")
@@ -528,11 +528,11 @@ def GameEndPVE(GameBoard, color):
 
         if black > white:
             easygui.msgbox(
-                "The game is over! Player 1 " + Player1 + " is the winner! Press play above to start again",
+                "The game is over! Player 1 (Black) is the winner! Press play above to start again",
                 title="Game End")
         elif white > black:
             easygui.msgbox(
-                "The game is over! Player 2 " + Player2 + " is the winner! Press play above to start again",
+                "The game is over! The computer is the winner! Press play above to start again",
                 title="Game End")
         elif white == black:
             easygui.msgbox("The game is over! It is a tie! Press play above to start again", title="Game End")
