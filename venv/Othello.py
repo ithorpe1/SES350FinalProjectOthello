@@ -482,6 +482,8 @@ def GamePVE(GameBoard, i, j):
             coord = changeListPlayer[i]
             changePiece(GameBoard, coord[0], coord[1], "Player1")
 
+    endGamePVE(GameBoard, "Black")
+
     #Computer's choice
     changeListChoice = []
     for i in range(8):
@@ -497,6 +499,43 @@ def GamePVE(GameBoard, i, j):
     for i in range(len(finalChangeListComputer)):
         coord = finalChangeListComputer[i]
         changePiece(GameBoard, coord[0], coord[1], "Player2")
+
+    endGamePVE(GameBoard, "White")
+
+
+def GameEndPVE(Gameboard, color):
+    moves = 0
+    for i in range(8):
+        for j in range(8):
+            if GameBoard.board[i][j] == "Blank":
+                if color == "Black":
+                    changeList = isLegal(GameBoard, i, j, "Black")
+                elif color == "White":
+                    changeList = isLegal(GameBoard, i, j, "White")
+
+                if len(changeList) != 0:
+                    moves += 1
+
+    if moves == 0:
+        black = 0
+        white = 0
+        for i in range(8):
+            for j in range(8):
+                if GameBoard.board[i][j] == "Black":
+                    black += 1
+                elif GameBoard.board[i][j] == "White":
+                    white += 1
+
+        if black > white:
+            easygui.msgbox(
+                "The game is over! Player 1 " + Player1 + " is the winner! Press play above to start again",
+                title="Game End")
+        elif white > black:
+            easygui.msgbox(
+                "The game is over! Player 2 " + Player2 + " is the winner! Press play above to start again",
+                title="Game End")
+        elif white == black:
+            easygui.msgbox("The game is over! It is a tie! Press play above to start again", title="Game End")
 
 
 def GameBoardSetupPVP():

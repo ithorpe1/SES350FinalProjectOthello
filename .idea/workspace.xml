@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588108556232</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length">
+      <created>1588266493675</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588266493675</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +204,8 @@
     <MESSAGE value="Updated end game checker with new diagonal legality checks" />
     <MESSAGE value="Corrected error in diagonal move checker (&lt; and &gt; were inverted for west/east checks) and added diagonal lists to end game checker" />
     <MESSAGE value="Updated diagonal checker as it was not passing coordinates to the change token function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated diagonal checker as it was not passing coordinates to the change token function" />
+    <MESSAGE value="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length" />
+    <option name="LAST_COMMIT_MESSAGE" value="Undid previous changes due to errors&#10;Added Human VS Computer mode, where the computer will choose randomly from a list of valid moves&#10;moved legality checker to own function to make changes/calls easier and reduce code length" />
   </component>
   <component name="WindowStateProjectService">
     <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588266492983">
@@ -212,22 +220,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588266113959">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588269046100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113959" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588266113958">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588269046100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113958" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588266113957">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588269046100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113957" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588266113958">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588269046100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588266113958" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588269046100" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,10 +244,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266570995" />
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588178019356">
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588273772379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588178019356" />
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588273772379" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588266564358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
