@@ -207,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588278732756</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Computer vs Computer runs for one simulation then fails">
+      <created>1588279013798</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1588279013798</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,13 +244,14 @@
     <MESSAGE value="Corrected end game for Human VS Computer" />
     <MESSAGE value="Changed end game messages" />
     <MESSAGE value="Started Computer vs Computer simulations, but has an error preventing its use" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Computer vs Computer simulations, but has an error preventing its use" />
+    <MESSAGE value="Computer vs Computer runs for one simulation then fails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Computer vs Computer runs for one simulation then fails" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588278732137">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588279013050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588278732137" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588279013050" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,22 +260,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="796" y="413" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588104284589" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588278910115">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1588281283838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588278910115" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588278910115">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588281283838" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1588281283838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588278910115" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588278910115">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588281283838" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1588281283838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588278910115" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588278910115">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588281283838" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1588281283838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588278910115" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588281283838" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588105880878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -276,10 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588266570995" />
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588273772379">
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588450965436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588273772379" />
+    <state x="1136" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588450965436" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588266564358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

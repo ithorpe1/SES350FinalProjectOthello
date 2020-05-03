@@ -576,13 +576,12 @@ def GameBoardSetupPVE():
 
 
 def GameSimulation():
-    label = Label(root, text="Please Wait!")
-    label.pack()
     #number of runs to make
-    runs = 10
+    runs = 1000
     #sets win tracker for both colors
     whiteWins = 0
     blackWins = 0
+    Ties = 0
     # Runs simulation until out of chosen number of runs
     GameBoard = Board()
     while runs > 0:
@@ -594,15 +593,27 @@ def GameSimulation():
                     changeListComputer = isLegal(GameBoard, i, j, "Black")
 
                     if len(changeListComputer) != 0:
-                        changeListChoice.append([i, j])
-        choice = random.choice(changeListChoice)
-        finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "Black")
-        finalChangeListComputer += [[choice[0], choice[1]]]
-        for i in range(len(finalChangeListComputer)):
-            coord = finalChangeListComputer[i]
-            GameBoard.board[coord[0]][coord[1]] = "Black"
+                        changeListChoice.append([i, j, len(changeListComputer)])
+        if len(changeListChoice) != 1 and len(changeListChoice) != 0:
+            highest = 0
+            changeListChoiceHigh = []
+            for i in range(len(changeListChoice)):
+                if changeListChoice[i][2] > highest:
+                    highest = changeListChoice[i][2]
+            for i in range(len(changeListChoice)):
+                if changeListChoice[i][2] == highest:
+                    changeListChoiceHigh.append(changeListChoice[i])
+            choice = random.choice(changeListChoiceHigh)
+            finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "Black")
+            finalChangeListComputer += [[choice[0], choice[1]]]
+            for i in range(len(finalChangeListComputer)):
+                coord = finalChangeListComputer[i]
+                GameBoard.board[coord[0]][coord[1]] = "Black"
+        elif len(changeListChoice) == 1:
+            GameBoard.board[changeListChoice[0][0]][changeListChoice[0][1]] = "Black"
 
         moves = 0
+        changeList = []
         for i in range(8):
             for j in range(8):
                 if GameBoard.board[i][j] == "Blank":
@@ -629,6 +640,10 @@ def GameSimulation():
                 whiteWins += 1
                 runs -= 1
                 GameBoard = Board()
+            else:
+                Ties += 1
+                GameBoard = Board()
+                runs -= 1
 
         changeListChoice = []
         for i in range(8):
@@ -637,15 +652,27 @@ def GameSimulation():
                     changeListComputer = isLegal(GameBoard, i, j, "White")
 
                     if len(changeListComputer) != 0:
-                        changeListChoice.append([i, j])
-        choice = random.choice(changeListChoice)
-        finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "White")
-        finalChangeListComputer += [[choice[0], choice[1]]]
-        for i in range(len(finalChangeListComputer)):
-            coord = finalChangeListComputer[i]
-            GameBoard.board[coord[0]][coord[1]] = "White"
+                        changeListChoice.append([i, j, len(changeListComputer)])
+        if len(changeListChoice) != 1 and len(changeListChoice) != 0:
+            lowest = changeListChoice[0][2]
+            changeListChoiceLow = []
+            for i in range(len(changeListChoice)):
+                if changeListChoice[i][2] < lowest:
+                    lowest = changeListChoice[i][2]
+            for i in range(len(changeListChoice)):
+                if changeListChoice[i][2] == lowest:
+                    changeListChoiceLow.append(changeListChoice[i])
+            choice = random.choice(changeListChoiceLow)
+            finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "White")
+            finalChangeListComputer += [[choice[0], choice[1]]]
+            for i in range(len(finalChangeListComputer)):
+                coord = finalChangeListComputer[i]
+                GameBoard.board[coord[0]][coord[1]] = "White"
+        elif len(changeListChoice) == 1:
+            GameBoard.board[changeListChoice[0][0]][changeListChoice[0][1]] = "White"
 
         moves = 0
+        changeList = []
         for i in range(8):
             for j in range(8):
                 if GameBoard.board[i][j] == "Blank":
@@ -672,15 +699,21 @@ def GameSimulation():
                 whiteWins += 1
                 runs -= 1
                 GameBoard = Board()
+            else:
+                Ties += 1
+                GameBoard = Board()
+                runs -= 1
 
     if whiteWins > blackWins:
         easygui.msgbox(
             "The game is over! Computer 2 (White) is the winner! Black won " + str(blackWins) + " times and white won "
-            + str(whiteWins) + " time. Press play above to start again", title="Game End")
+            + str(whiteWins) + " time. There were " + str(Ties) + " ties. Press play above to start again", title="Game End")
     elif whiteWins < blackWins:
         easygui.msgbox(
             "The game is over! Computer 1 (Black) is the winner! Black won " + str(blackWins) + " times and white won "
-            + str(whiteWins) + " time. Press play above to start again", title="Game End")
+            + str(whiteWins) + " time. There were " + str(Ties) + " ties. Press play above to start again", title="Game End")
+    else:
+        print("Tie")
 
 
 root = Tk()
