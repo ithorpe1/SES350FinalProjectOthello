@@ -595,15 +595,7 @@ def GameSimulation():
                     if len(changeListComputer) != 0:
                         changeListChoice.append([i, j, len(changeListComputer)])
         if len(changeListChoice) != 1 and len(changeListChoice) != 0:
-            highest = 0
-            changeListChoiceHigh = []
-            for i in range(len(changeListChoice)):
-                if changeListChoice[i][2] > highest:
-                    highest = changeListChoice[i][2]
-            for i in range(len(changeListChoice)):
-                if changeListChoice[i][2] == highest:
-                    changeListChoiceHigh.append(changeListChoice[i])
-            choice = random.choice(changeListChoiceHigh)
+            choice = random.choice(changeListChoice)
             finalChangeListComputer = isLegal(GameBoard, choice[0], choice[1], "Black")
             finalChangeListComputer += [[choice[0], choice[1]]]
             for i in range(len(finalChangeListComputer)):
@@ -714,6 +706,10 @@ def GameSimulation():
             + str(whiteWins) + " time. There were " + str(Ties) + " ties. Press play above to start again", title="Game End")
     else:
         print("Tie")
+
+
+def sortThird(val): #For sorting based on number of tokens claimed
+    return val[2]
 
 
 root = Tk()
