@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f095127-0d80-4a1d-bb1b-ab04eab56cfe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Othello.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Othello.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588279013798</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Found the bug preventing Comp vs Comp from running effectively, was not accounting for ties">
+      <created>1588537291609</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1588537291609</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,13 +251,14 @@
     <MESSAGE value="Changed end game messages" />
     <MESSAGE value="Started Computer vs Computer simulations, but has an error preventing its use" />
     <MESSAGE value="Computer vs Computer runs for one simulation then fails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Computer vs Computer runs for one simulation then fails" />
+    <MESSAGE value="Found the bug preventing Comp vs Comp from running effectively, was not accounting for ties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Found the bug preventing Comp vs Comp from running effectively, was not accounting for ties" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588279013050">
+    <state x="610" y="114" key="CommitChangelistDialog2" timestamp="1588537290951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588279013050" />
+    <state x="610" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588537290951" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588105847402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
